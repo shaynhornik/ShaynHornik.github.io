@@ -3,117 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayn Hornik | Pattern Recognition & Code</title>
+    <title>Shayn Hornik</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        accent: '#a78bfa', // Light Purple
-                        bg: '#0f172a', // Slate 900
+                        bg: '#111',
+                        code: '#222',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-bg text-slate-200 font-sans selection:bg-accent selection:text-white">
+<body class="bg-bg text-gray-300 font-sans leading-relaxed">
 
-    <div class="max-w-3xl mx-auto px-6 py-20">
+    <div class="max-w-2xl mx-auto px-6 py-24">
         
         <!-- Header -->
-        <header class="mb-24 text-center md:text-left">
-            <div class="inline-block bg-slate-800 rounded-full px-3 py-1 text-xs font-mono text-accent mb-4 border border-slate-700">
-                SYSTEM STATUS: OPTIMAL
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-                Shayn Hornik.
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-400 leading-relaxed mb-8">
-                Software Bounty Hunter & Engineer.<br>
-                <span class="text-accent">Superpower:</span> Autistic pattern recognition. If there's a bug, it bothers me until I fix it. I don't just patch code; I correct the universe.
+        <header class="mb-20">
+            <h1 class="text-4xl font-bold text-white mb-4">Shayn Hornik</h1>
+            <p class="text-lg text-gray-400 mb-6">
+                Backend Engineer. Bounty Hunter.
             </p>
-            <div class="flex gap-4 justify-center md:justify-start">
-                <a href="mailto:shaynhornik@gmail.com" class="bg-accent text-white px-6 py-3 rounded-lg font-bold hover:bg-violet-600 transition hover:-translate-y-1 shadow-lg shadow-violet-900/20">Hire Me</a>
-                <a href="https://github.com/shaynhornik" class="px-6 py-3 border border-slate-700 rounded-lg hover:border-white transition text-white">GitHub</a>
+            <div class="font-mono text-sm text-gray-500 bg-code p-4 rounded-lg border border-gray-800">
+                <span class="text-green-400">$</span> whoami<br>
+                > I fix complex systems. <br>
+                > I don't drink coffee. <br>
+                > I prefer APIs to meetings.
             </div>
         </header>
 
-        <!-- Stats -->
-        <section class="mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                <div class="text-3xl font-bold text-white mb-1">∞</div>
-                <div class="text-xs font-mono text-slate-500">FOCUS</div>
-            </div>
-            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                <div class="text-3xl font-bold text-white mb-1">0mg</div>
-                <div class="text-xs font-mono text-slate-500">CAFFEINE</div>
-            </div>
-            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                <div class="text-3xl font-bold text-white mb-1">100%</div>
-                <div class="text-xs font-mono text-slate-500">IMMUNITY</div>
-            </div>
-            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                <div class="text-3xl font-bold text-white mb-1">Top 1%</div>
-                <div class="text-xs font-mono text-slate-500">GOOGLE-FU</div>
-            </div>
-        </section>
-
         <!-- Projects -->
-        <section class="mb-24">
-            <h2 class="font-mono text-accent mb-8 text-lg tracking-widest">/// RECENT FIXES</h2>
+        <section class="mb-20">
+            <h2 class="font-bold text-white mb-8 border-b border-gray-800 pb-2">Recent Work</h2>
             
-            <div class="space-y-12">
-                <!-- Project 1 -->
-                <div class="group relative pl-8 border-l-2 border-slate-800 hover:border-accent transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-2">API Sentinel</h3>
-                    <p class="text-slate-400 mb-4">Because "it works on my machine" isn't a monitoring strategy. Automated health checks that catch failures before users do.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Node.js</span>
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Monitoring</span>
+            <div class="space-y-10">
+                <div>
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-semibold text-white"><a href="https://github.com/shaynhornik/api-sentinel" class="hover:underline decoration-gray-500">API Sentinel</a></h3>
+                        <span class="font-mono text-xs text-gray-500">NODE.JS</span>
                     </div>
-                    <a href="https://github.com/shaynhornik/api-sentinel" class="text-accent text-sm hover:underline">View Code →</a>
+                    <p class="text-gray-400 text-sm">
+                        Production-grade API monitoring. Because PagerDuty is expensive and I like sleeping.
+                    </p>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="group relative pl-8 border-l-2 border-slate-800 hover:border-accent transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-2">Destructive Command Guard</h3>
-                    <p class="text-slate-400 mb-4">Fixed a critical GLIBC linking issue affecting older Linux distros. Re-engineered the CI pipeline to use static `musl` linking because leaving users behind is unacceptable.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Rust</span>
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Systems</span>
+                <div>
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-semibold text-white"><a href="https://github.com/Dicklesworthstone/destructive_command_guard/pull/40" class="hover:underline decoration-gray-500">Destructive Command Guard</a></h3>
+                        <span class="font-mono text-xs text-gray-500">RUST</span>
                     </div>
-                    <a href="https://github.com/Dicklesworthstone/destructive_command_guard/pull/40" class="text-accent text-sm hover:underline">See the Fix →</a>
+                    <p class="text-gray-400 text-sm">
+                        Fixed a GLIBC linking issue for older Linux distros. Static linking (musl) is the only way to live.
+                    </p>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="group relative pl-8 border-l-2 border-slate-800 hover:border-accent transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-2">Business Intel Dashboard</h3>
-                    <p class="text-slate-400 mb-4">A custom operations platform that turns chaos into data. Proactive alerts for revenue gaps and resource utilization. No more spreadsheets.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Full Stack</span>
-                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-400 border border-slate-700">Automation</span>
+                <div>
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-semibold text-white"><a href="https://github.com/shaynhornik/service-ops-dashboard" class="hover:underline decoration-gray-500">Operations Dashboard</a></h3>
+                        <span class="font-mono text-xs text-gray-500">FULL STACK</span>
                     </div>
-                    <a href="https://github.com/shaynhornik/service-ops-dashboard" class="text-accent text-sm hover:underline">Check it out →</a>
+                    <p class="text-gray-400 text-sm">
+                        Business intelligence tool. It tracks revenue so I don't have to guess.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="text-center py-16 bg-slate-800/30 rounded-2xl border border-slate-800">
-            <h2 class="text-3xl font-bold mb-4 text-white">Have a problem?</h2>
-            <p class="text-slate-400 mb-8 max-w-md mx-auto">I specialize in fixing bugs, security holes, and legacy messes that make other devs cry. If it's broken, I want to know.</p>
-            <a href="mailto:shaynhornik@gmail.com" class="text-accent font-mono text-lg hover:text-white transition">shaynhornik@gmail.com</a>
+        <!-- Services -->
+        <section class="mb-20">
+            <h2 class="font-bold text-white mb-6 border-b border-gray-800 pb-2">Hire Me</h2>
+            <p class="mb-6">
+                I accept bounties and contracts for:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-400 mb-8">
+                <li>Fixing bugs your team gave up on.</li>
+                <li>Security patches (before you get hacked).</li>
+                <li>Automating boring workflows.</li>
+            </ul>
+            <a href="mailto:shaynhornik@gmail.com" class="inline-block bg-white text-black px-6 py-2 font-bold rounded hover:bg-gray-200 transition">Email Me</a>
         </section>
 
-        <footer class="mt-20 text-center text-slate-600 text-sm font-mono">
-            <p>Built by Shayn. 0% Coffee. 100% Focus.</p>
+        <footer class="text-center text-xs text-gray-600 font-mono">
+            <p>git push --force life</p>
         </footer>
 
     </div>
