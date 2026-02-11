@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayn Hornik | Software Bounty Hunter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            DEFAULT: '#00ff41',
+                            dim: 'rgba(0, 255, 65, 0.1)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .cyber-border { border: 1px solid #333; transition: all 0.3s ease; }
+        .cyber-border:hover { border-color: #00ff41; box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); }
+        .scanline {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 51%);
+            background-size: 100% 4px; opacity: 0.05; z-index: 999;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyber selection:text-black">
+    <div class="scanline"></div>
+
+    <div class="max-w-4xl mx-auto px-6 py-20">
+        <!-- Header -->
+        <header class="mb-24">
+            <p class="font-mono text-cyber text-sm mb-4">/// STATUS: AVAILABLE FOR CONTRACT</p>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6 text-white">
+                Shayn Hornik.
+            </h1>
+            <p class="text-2xl text-gray-400 max-w-2xl leading-relaxed">
+                Software Bounty Hunter. <br>
+                I fix critical bugs, patch security holes, and rescue stalled projects.
+            </p>
+            <div class="mt-10 flex gap-6">
+                <a href="mailto:shaynhornik@gmail.com" class="bg-white text-black px-8 py-3 font-bold hover:bg-cyber hover:scale-105 transition transform">HIRE ME</a>
+                <a href="https://github.com/shaynhornik" class="px-8 py-3 border border-gray-700 font-mono hover:border-white transition">GITHUB_PROFILE</a>
+            </div>
+        </header>
+
+        <!-- Services -->
+        <section class="mb-24">
+            <h2 class="font-mono text-sm text-gray-500 mb-8 uppercase tracking-widest">/// Capabilities</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-8 cyber-border bg-neutral-900/50">
+                    <h3 class="text-xl font-bold text-white mb-3">🛠️ Critical Bug Fixes</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Complex regressions, race conditions, and memory leaks. When your team is stuck, I unstuck them.</p>
+                </div>
+                <div class="p-8 cyber-border bg-neutral-900/50">
+                    <h3 class="text-xl font-bold text-white mb-3">🔒 Security Remediation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dependency auditing, vulnerability patching (GLIBC/OpenSSL), and hardening CI/CD pipelines.</p>
+                </div>
+                <div class="p-8 cyber-border bg-neutral-900/50">
+                    <h3 class="text-xl font-bold text-white mb-3">⚡ Performance Tuning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Database query optimization, API latency reduction, and memory footprint analysis.</p>
+                </div>
+                <div class="p-8 cyber-border bg-neutral-900/50">
+                    <h3 class="text-xl font-bold text-white mb-3">🤖 Automation Systems</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Custom bots, scrapers, and workflow automation tools to replace manual labor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="mb-24">
+            <h2 class="font-mono text-sm text-gray-500 mb-8 uppercase tracking-widest">/// Mission Logs</h2>
+            <div class="space-y-12">
+                <!-- DCG -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-cyber transition">Destructive Command Guard</h3>
+                        <span class="font-mono text-xs text-gray-500">OPEN SOURCE FIX</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Resolved critical GLIBC version mismatch preventing deployment on older Linux distributions (Ubuntu 22.04/WSL).</p>
+                    <ul class="font-mono text-xs text-gray-500 space-y-1 mb-6">
+                        <li>> Re-engineered CI pipeline for static musl linking</li>
+                        <li>> Vendored OpenSSL dependencies</li>
+                        <li>> Migrated to Rustls</li>
+                    </ul>
+                    <a href="https://github.com/Dicklesworthstone/destructive_command_guard/pull/40" class="text-sm border-b border-gray-700 hover:border-cyber pb-0.5">View Pull Request →</a>
+                </div>
+
+                <!-- API Sentinel -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-cyber transition">API Sentinel</h3>
+                        <span class="font-mono text-xs text-gray-500">TOOLING</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Built a production-grade API monitoring system with multi-channel alerting and health analytics.</p>
+                    <a href="https://github.com/shaynhornik/api-sentinel" class="text-sm border-b border-gray-700 hover:border-cyber pb-0.5">View Repository →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 pt-12 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 font-mono">
+            <p>&copy; 2026 Shayn Hornik.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">PGP_KEY</a>
+                <a href="https://github.com/shaynhornik" class="hover:text-white transition">GITHUB</a>
+                <a href="mailto:shaynhornik@gmail.com" class="hover:text-white transition">EMAIL</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
